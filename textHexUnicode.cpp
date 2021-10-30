@@ -138,17 +138,22 @@ int main() {
     unicodeName = calculateHexUnicodeNumber(userString);
 
     // output
-    std::cout << "" << std::endl;
-    std::cout << userString <<" in hex is ";
-    std::cout << "[";
-    for (std::string answerEach : unicodeName) {
-        answerTimes += 1;
-        std::cout << answerEach;
-        if (answerTimes < unicodeName.size()) {
-            std::cout << ", ";
+    if (unicodeName.empty()) {
+        std::cout << "That string is not in hex unicode dictionary."
+        << std::endl;
+    } else {
+        std::cout << "" << std::endl;
+        std::cout << userString <<" in hex is ";
+        std::cout << "[";
+        for (std::string answerEach : unicodeName) {
+            answerTimes += 1;
+            std::cout << answerEach;
+            if (answerTimes < unicodeName.size()) {
+                std::cout << ", ";
+            }
         }
+        std::cout << "]" << std::endl;
     }
-    std::cout << "]" << std::endl;
 
     std::cout << "\nDone." << std::endl;
 }
