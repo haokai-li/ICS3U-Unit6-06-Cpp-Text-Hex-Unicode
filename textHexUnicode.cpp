@@ -139,6 +139,7 @@ int main() {
 
     // output
     if (unicodeName.empty()) {
+        std::cout << "" << std::endl;
         std::cout << "That string is not in hex unicode dictionary."
         << std::endl;
     } else {
